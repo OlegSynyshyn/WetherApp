@@ -1,11 +1,23 @@
 <HomeScreen>:
-    BoxLayout:
-        size_hint: (1, 1)
-        orientation: 'vertical'
-        Button:
-            text: "Hello"
-            size_hint: (0.5, 0.2)
-            pos_hint: {"center_x" : 0.5}
-        Button:
-            text: "Hello"
-            size_hint: (0.5, 0.2)
+    MDBoxLayout:
+        size_hint: (1,1)
+        orientation: "vertical"
+        spacing: "20sp"
+
+
+        MDTopAppBar:
+            title: "WeatherApp"
+            mg_bg_color: "602b7a"
+
+        MDBoxLayout:
+            MDTextField:
+                hint_text: "Fill mode"
+                mode: "fill"
+
+            MDIconButton:
+                icon: "android"
+                mg_bg_color: "602b7a"
+        
+        MDLabel:
+            text: "Content"
+            halign: "center"
