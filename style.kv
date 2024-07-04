@@ -13,12 +13,15 @@
             padding: "20sp"
             spacing: "20sp"
             MDTextField:
+                id: city_name
                 hint_text: "Введіть місто"
                 mode: "fill"
 
             MDIconButton:
+                id: search_btn
                 icon: "magnify"
                 mg_bg_color: "#602b7a"
+                on_press: root.search()
         
         MDLabel:
             text: "Content"

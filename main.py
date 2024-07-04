@@ -8,6 +8,11 @@ class HomeScreen(MDScreen):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+    def search(self):
+        city = self.ids.city_name.text.lower().strip()
+        print(city)
+
+
 
 class MainApp(MDApp):
     def build(self):
