@@ -7,6 +7,13 @@
         orientation: "vertical"
         padding: '20sp'
         pos_hint: {'center_y': 0.5}
+
+
+        MDLabel:
+            id: date_time
+            text: "Зараз"
+            font_style: 'Body1'
+            halign: "center"
         MDLabel:
             id: temp
             text: "29 °C"
@@ -22,7 +29,7 @@
 
         AsyncImage:
             id: image
-            source: "https://openweathermap.org/img/wn/10d@2x.png"
+            source: f'https://openweathermap.org/img/wn/10d@2x.png'
             size: ("150px", "150px")
             fit_mode: 'contain'
 
@@ -39,6 +46,12 @@
             id: desc
             text: "Хмарно, дощ"
             font_style: 'H4'
+            halign: "center"
+
+        MDLabel:
+            id: humidity
+            text: "Вологість 50"
+            font_style: 'H6'
             halign: "center"
 
 
@@ -94,6 +107,3 @@
                 id: weather_carousel
                 direction: 'right'
                 size_hint: (1, 0.5)
-
-                WeatherCard:
-                    
