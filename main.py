@@ -49,8 +49,8 @@ class HomeScreen(MDScreen):
         temp_like = data["main"]["feels_like"]
         humidity = data["main"]["humidity"]
         wind_speed = data["wind"]["speed"]
-        if 'dx_txt' in data:
-            date = data["dt_txt"][5: -3]
+        if 'dt_txt' in data:
+            date = data["dt_txt"][5:-3]
         else:
             date = "Зараз"
         new_card = WeatherCard(date, image, temp, temp_like, wind_speed, desc, humidity)
